@@ -14,29 +14,41 @@ exports[`should correctly render ComplaintsList 1`] = `
     </div>
   </div>
   <div>
-    <div>
-      <div>
-        Me robaron mi celular
-      </div>
-      <div>
-        esta yo en la calle cuando de repente un maricon me robo el celular.
-      </div>
+    <div
+      key="1"
+    >
+      <p>
+        <div>
+          Me robaron mi celular
+        </div>
+        <div>
+          esta yo en la calle cuando de repente un maricon me robo el celular.
+        </div>
+      </p>
     </div>
-    <div>
-      <div>
-        Me robaron mi celular
-      </div>
-      <div>
-        esta yo en la calle cuando de repente un maricon me robo el celular.
-      </div>
+    <div
+      key="2"
+    >
+      <p>
+        <div>
+          Me robaron mi celular
+        </div>
+        <div>
+          esta yo en la calle cuando de repente un maricon me robo el celular.
+        </div>
+      </p>
     </div>
-    <div>
-      <div>
-        Me robaron mi celular
-      </div>
-      <div>
-        esta yo en la calle cuando de repente un maricon me robo el celular.
-      </div>
+    <div
+      key="3"
+    >
+      <p>
+        <div>
+          Me robaron mi celular
+        </div>
+        <div>
+          esta yo en la calle cuando de repente un maricon me robo el celular.
+        </div>
+      </p>
     </div>
   </div>
 </div>
