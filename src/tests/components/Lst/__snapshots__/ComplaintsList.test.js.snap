@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render ComplaintsList 1`] = `
+<div>
+  <div>
+    <div>
+      Denuncia
+    </div>
+    <div>
+      Tipo
+    </div>
+    <div>
+      Fecha
+    </div>
+  </div>
+  <div>
+    <div>
+      <div>
+        Me robaron mi celular
+      </div>
+      <div>
+        esta yo en la calle cuando de repente un maricon me robo el celular.
+      </div>
+    </div>
+    <div>
+      <div>
+        Me robaron mi celular
+      </div>
+      <div>
+        esta yo en la calle cuando de repente un maricon me robo el celular.
+      </div>
+    </div>
+    <div>
+      <div>
+        Me robaron mi celular
+      </div>
+      <div>
+        esta yo en la calle cuando de repente un maricon me robo el celular.
+      </div>
+    </div>
+  </div>
+</div>
+`;
