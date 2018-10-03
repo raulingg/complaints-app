@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RENDER should render ComplaintForm correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <input
+      name="title"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <textarea
+      maxLength="2000"
+      name="content"
+      onChange={[Function]}
+      rows="10"
+      value=""
+    />
+  </div>
+  <div>
+    <input
+      name="happenedAt"
+      onChange={[Function]}
+      type="date"
+      value={"1970-01-01T00:00:00.000Z"}
+    />
+  </div>
+  <div>
+    <input
+      name="reportTo"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <button
+      className="button"
+    >
+      Guardar cambios
+    </button>
+  </div>
+</form>
+`;
+
+exports[`RENDER should render ComplaintForm with complaint data 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <input
+      name="title"
+      onChange={[Function]}
+      type="text"
+      value="Me robaron mi celular"
+    />
+  </div>
+  <div>
+    <textarea
+      maxLength="2000"
+      name="content"
+      onChange={[Function]}
+      rows="10"
+      value="esta yo en la calle cuando de repente un maricon me robo el celular."
+    />
+  </div>
+  <div>
+    <input
+      name="happenedAt"
+      onChange={[Function]}
+      type="date"
+      value={"1970-01-01T00:00:01.023Z"}
+    />
+  </div>
+  <div>
+    <input
+      name="reportTo"
+      onChange={[Function]}
+      type="text"
+      value="Americatel SAC"
+    />
+  </div>
+  <div>
+    <button
+      className="button"
+    >
+      Guardar cambios
+    </button>
+  </div>
+</form>
+`;
