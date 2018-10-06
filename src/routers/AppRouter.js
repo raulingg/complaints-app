@@ -1,28 +1,27 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
 import LoginPageComponent from '../components/LoginPage';
 import ComplaintsListComponent from '../components/List/ComplaintsList';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import AddComplaintPage from '../components/AddComplaintPage';
-
-export const history = createHistory();
+import AddComplaintPageComponent from '../components/AddComplaintPage';
+import EditComplaintPageComponent from '../components/EditComplaintPage';
 
 const AppRouter = () => (
-  <Router history={history}>
+  <BrowserRouter>
     <div>
       <Switch>
         <PublicRoute path="/" component={ComplaintsListComponent} exact />
         <PublicRoute path="/login" component={LoginPageComponent} />
-        <PrivateRoute path="/add" component={AddComplaintPage} />
+        <PrivateRoute path="/add" component={AddComplaintPageComponent} />
+        <PrivateRoute path="/edit/:id" component={EditComplaintPageComponent} />
         <PrivateRoute path="/dashboard" component={DashboardPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
 export default AppRouter;

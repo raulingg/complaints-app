@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import database, { auth } from './firebase/firebase';
-import AppRouter, { history } from './routers/AppRouter';
+import createHistory from 'history/createBrowserHistory';
+import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
+import database, { auth } from './firebase/firebase';
 import { login, logout } from './actions/auth';
 import { startSetComplaints } from './actions/complaints';
 import 'normalize.css/normalize.css';
-import './styles/styles.scss';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import 'react-dates/lib/css/_datepicker.css';
+import './styles/styles.scss';
 import LoadingPage from './components/LoadingPage';
 import complaints from './tests/fixtures/complaints';
 
@@ -44,6 +46,7 @@ database
         } else {
           store.dispatch(logout());
           renderApp();
+          const history = createHistory();
           history.push('/');
         }
       });

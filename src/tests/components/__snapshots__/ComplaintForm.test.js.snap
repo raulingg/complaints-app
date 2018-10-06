@@ -13,20 +13,112 @@ exports[`RENDER should render ComplaintForm correctly 1`] = `
     />
   </div>
   <div>
-    <textarea
-      maxLength="2000"
-      name="content"
-      onChange={[Function]}
-      rows="10"
-      value=""
+    <t
+      customDecorators={Array []}
+      editorClassName="demo-editor"
+      localization={
+        Object {
+          "locale": "en",
+          "translations": Object {},
+        }
+      }
+      onEditorStateChange={[Function]}
+      stripPastedStyles={false}
+      toolbarHidden={false}
+      toolbarOnFocus={false}
+      wrapperClassName="demo-wrapper"
     />
   </div>
+  <br />
   <div>
-    <input
-      name="happenedAt"
-      onChange={[Function]}
-      type="date"
-      value={"1970-01-01T00:00:00.000Z"}
+    <withStyles(SingleDatePicker)
+      anchorDirection="left"
+      appendToBody={false}
+      block={false}
+      calendarInfoPosition="bottom"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disableScroll={false}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      horizontalMonthPadding={13}
+      id="date"
+      initialVisibleMonth={null}
+      inputIconPosition="before"
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      openDirection="down"
+      orientation="horizontal"
+      phrases={
+        Object {
+          "calendarLabel": "Calendar",
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsSelected": [Function],
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month.",
+          "jumpToPrevMonth": "Move backward to switch to the previous month.",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+          "moveFocusByOneMonth": "Switch months.",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+          "openThisPanel": "Open this panel.",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field.",
+          "selectFocusedDate": "Select the date in focus.",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonthElement={null}
+      renderMonthText={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      small={false}
+      verticalHeight={null}
+      verticalSpacing={22}
+      weekDayFormat="dd"
+      withFullScreenPortal={false}
+      withPortal={false}
     />
   </div>
   <div>
@@ -60,20 +152,468 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
     />
   </div>
   <div>
-    <textarea
-      maxLength="2000"
-      name="content"
-      onChange={[Function]}
-      rows="10"
-      value="esta yo en la calle cuando de repente un maricon me robo el celular."
+    <t
+      customDecorators={Array []}
+      editorClassName="demo-editor"
+      editorState={
+        EditorState {
+          "_immutable": Immutable.Record {
+            "allowUndo": true,
+            "currentContent": Immutable.Record {
+              "entityMap": Object {
+                "__add": [Function],
+                "__create": [Function],
+                "__get": [Function],
+                "__getLastCreatedEntityKey": [Function],
+                "__mergeData": [Function],
+                "__replaceData": [Function],
+                "add": [Function],
+                "create": [Function],
+                "get": [Function],
+                "getLastCreatedEntityKey": [Function],
+                "mergeData": [Function],
+                "replaceData": [Function],
+              },
+              "blockMap": Immutable.OrderedMap {
+                "fegvl": Immutable.Record {
+                  "key": "fegvl",
+                  "type": "unstyled",
+                  "text": "esta yo en la calle cuando de repente un maricon me robo el celular.",
+                  "characterList": Immutable.List [
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                    Immutable.Record {
+                      "style": Immutable.OrderedSet [],
+                      "entity": null,
+                    },
+                  ],
+                  "depth": undefined,
+                  "data": Immutable.Map {},
+                },
+              },
+              "selectionBefore": Immutable.Record {
+                "anchorKey": "fegvl",
+                "anchorOffset": 0,
+                "focusKey": "fegvl",
+                "focusOffset": 0,
+                "isBackward": false,
+                "hasFocus": false,
+              },
+              "selectionAfter": Immutable.Record {
+                "anchorKey": "fegvl",
+                "anchorOffset": 0,
+                "focusKey": "fegvl",
+                "focusOffset": 0,
+                "isBackward": false,
+                "hasFocus": false,
+              },
+            },
+            "decorator": null,
+            "directionMap": Immutable.OrderedMap {
+              "fegvl": "LTR",
+            },
+            "forceSelection": false,
+            "inCompositionMode": false,
+            "inlineStyleOverride": null,
+            "lastChangeType": null,
+            "nativelyRenderedContent": null,
+            "redoStack": Immutable.Stack [],
+            "selection": Immutable.Record {
+              "anchorKey": "fegvl",
+              "anchorOffset": 0,
+              "focusKey": "fegvl",
+              "focusOffset": 0,
+              "isBackward": false,
+              "hasFocus": false,
+            },
+            "treeMap": Immutable.OrderedMap {
+              "fegvl": Immutable.List [
+                Immutable.Record {
+                  "start": 0,
+                  "end": 68,
+                  "decoratorKey": null,
+                  "leaves": Immutable.List [
+                    Immutable.Record {
+                      "start": 0,
+                      "end": 68,
+                    },
+                  ],
+                },
+              ],
+            },
+            "undoStack": Immutable.Stack [],
+          },
+        }
+      }
+      localization={
+        Object {
+          "locale": "en",
+          "translations": Object {},
+        }
+      }
+      onEditorStateChange={[Function]}
+      stripPastedStyles={false}
+      toolbarHidden={false}
+      toolbarOnFocus={false}
+      wrapperClassName="demo-wrapper"
     />
   </div>
+  <br />
   <div>
-    <input
-      name="happenedAt"
-      onChange={[Function]}
-      type="date"
-      value={"1970-01-01T00:00:01.023Z"}
+    <withStyles(SingleDatePicker)
+      anchorDirection="left"
+      appendToBody={false}
+      block={false}
+      calendarInfoPosition="bottom"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:01.023Z"}
+      daySize={39}
+      disableScroll={false}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      horizontalMonthPadding={13}
+      id="date"
+      initialVisibleMonth={null}
+      inputIconPosition="before"
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      openDirection="down"
+      orientation="horizontal"
+      phrases={
+        Object {
+          "calendarLabel": "Calendar",
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsSelected": [Function],
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month.",
+          "jumpToPrevMonth": "Move backward to switch to the previous month.",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+          "moveFocusByOneMonth": "Switch months.",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+          "openThisPanel": "Open this panel.",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field.",
+          "selectFocusedDate": "Select the date in focus.",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonthElement={null}
+      renderMonthText={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      small={false}
+      verticalHeight={null}
+      verticalSpacing={22}
+      weekDayFormat="dd"
+      withFullScreenPortal={false}
+      withPortal={false}
     />
   </div>
   <div>

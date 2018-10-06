@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { Route, Redirect } from 'react-router-dom';
 import HeaderComponent from '../components/Header';
 
@@ -23,4 +24,4 @@ const mapStateToProps = state => ({
   isAuthenticated: !!state.auth.uid,
 });
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default withRouter(connect(mapStateToProps)(PrivateRoute));

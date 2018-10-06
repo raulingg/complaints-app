@@ -14,40 +14,47 @@ exports[`should correctly render ComplaintsList 1`] = `
     </div>
   </div>
   <div>
+    <Link
+      className="button"
+      replace={false}
+      to="/add"
+    >
+      Denunciar
+    </Link>
     <div
       key="1"
     >
       <p>
-        <div>
+        <Link
+          replace={false}
+          to="/edit/1"
+        >
           Me robaron mi celular
-        </div>
-        <div>
-          esta yo en la calle cuando de repente un maricon me robo el celular.
-        </div>
+        </Link>
       </p>
     </div>
     <div
       key="2"
     >
       <p>
-        <div>
+        <Link
+          replace={false}
+          to="/edit/2"
+        >
           Me robaron mi celular
-        </div>
-        <div>
-          esta yo en la calle cuando de repente un maricon me robo el celular.
-        </div>
+        </Link>
       </p>
     </div>
     <div
       key="3"
     >
       <p>
-        <div>
+        <Link
+          replace={false}
+          to="/edit/3"
+        >
           Me robaron mi celular
-        </div>
-        <div>
-          esta yo en la calle cuando de repente un maricon me robo el celular.
-        </div>
+        </Link>
       </p>
     </div>
   </div>

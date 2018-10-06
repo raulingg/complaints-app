@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const DotEnv = require('dotenv');
 const webpack = require('webpack');
 
@@ -12,7 +11,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const HtmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
-  filename: isProduction ? '../index.html' : 'index.html',
+  filename: isProduction ? '../index.html' : './index.html',
+  favicon: 'public/images/favicon.png',
 });
 
 const MiniCssPlugin = new MiniCssExtractPlugin({
@@ -28,6 +28,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, isProduction ? 'public/dist' : 'public'),
     filename: isProduction ? 'bundle.[hash].js' : 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -77,8 +78,9 @@ module.exports = {
   ],
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'public'),
     compress: true,
     historyApiFallback: true,
+    publicPath: '/',
   },
 };

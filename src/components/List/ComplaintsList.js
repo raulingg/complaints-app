@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 export const ComplaintsList = props => {
@@ -12,6 +13,9 @@ export const ComplaintsList = props => {
         <div>Fecha</div>
       </div>
       <div>
+        <Link to="/add" className="button">
+          Denunciar
+        </Link>
         {complaints.length === 0 ? (
           <div>
             <span>No encontramos ninguna denuncia.</span>
@@ -20,8 +24,7 @@ export const ComplaintsList = props => {
           complaints.map(complaint => (
             <div key={complaint.id}>
               <p>
-                <div>{complaint.title}</div>
-                <div>{complaint.content}</div>
+                <Link to={`/edit/${complaint.id}`}>{complaint.title}</Link>
               </p>
             </div>
           ))

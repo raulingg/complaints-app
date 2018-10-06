@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
-import { startAddComplaint as startAddComplaintAction } from '../actions/complaints';
+import { EditorState, ContentState, convertToRaw } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import htmlToDraft from 'html-to-draftjs';
+import draftToHtml from 'draftjs-to-html';
+import 'react-dates/initialize';
 
-export class ComplaintForm extends Component {
+export default class ComplaintForm extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       title: props.complaint ? props.complaint.title : '',
-      content: props.complaint ? props.complaint.content : '',
       reportTo: props.complaint ? props.complaint.reportTo : '',
       happenedAt: props.complaint ? moment(props.complaint.happenedAt) : moment(),
+      calendarFocused: false,
     };
+    if (props.complaint) {
+      const contentBlock = htmlToDraft(props.complaint.content);
+      const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+      this.state.editorState = EditorState.createWithContent(contentState);
+    }
   }
 
   onTitleChange = e => {
@@ -19,56 +29,54 @@ export class ComplaintForm extends Component {
     this.setState(() => ({ title }));
   };
 
-  onContentChange = e => {
-    const content = e.target.value;
-    this.setState(() => ({ content }));
-  };
+  onEditorStateChange = editorState => this.setState({ editorState });
 
   onReportToChange = e => {
     const reportTo = e.target.value;
     this.setState(() => ({ reportTo }));
   };
 
-  onHappenedAtChange = e => {
-    const happenedAt = e.target.value;
-    this.setState(() => ({ happenedAt }));
-  };
+  onHappenedAtChange = happenedAt => this.setState(() => ({ happenedAt }));
+
+  onHappenedAtFocusChange = ({ focused }) => this.setState(() => ({ calendarFocused: focused }));
 
   onSubmit = e => {
     e.preventDefault();
-    const { title, content, happenedAt, reportTo } = this.state;
-    const { startAddComplaint, history } = this.props;
-    startAddComplaint({
+    const { title, editorState, happenedAt, reportTo } = this.state;
+    const { onSubmit } = this.props;
+    const content = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+    onSubmit({
       title,
       content,
-      happenedAt,
+      happenedAt: happenedAt.valueOf(),
       reportTo,
     });
-    history.push('/');
   };
 
   render() {
-    const { title, content, happenedAt, reportTo } = this.state;
+    const { title, editorState, happenedAt, reportTo, calendarFocused } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
         <div>
           <input type="text" name="title" value={title} onChange={this.onTitleChange} />
         </div>
         <div>
-          <textarea
-            name="content"
-            maxLength="2000"
-            rows="10"
-            value={content}
-            onChange={this.onContentChange}
+          <Editor
+            editorState={editorState}
+            wrapperClassName="demo-wrapper"
+            editorClassName="demo-editor"
+            onEditorStateChange={this.onEditorStateChange}
           />
         </div>
+        <br />
         <div>
-          <input
-            type="date"
-            name="happenedAt"
-            value={happenedAt}
-            onChange={this.onHappenedAtChange}
+          <SingleDatePicker
+            date={happenedAt}
+            onDateChange={this.onHappenedAtChange}
+            focused={calendarFocused}
+            onFocusChange={this.onHappenedAtFocusChange}
+            numberOfMonths={1}
+            isOutsideRange={() => false}
           />
         </div>
         <div>
@@ -81,12 +89,3 @@ export class ComplaintForm extends Component {
     );
   }
 }
-
-const mapDispatchToProps = dispatch => ({
-  startAddComplaint: complaint => dispatch(startAddComplaintAction(complaint)),
-});
-
-export default connect(
-  undefined,
-  mapDispatchToProps
-)(ComplaintForm);
