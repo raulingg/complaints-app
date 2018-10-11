@@ -11,10 +11,12 @@ import {
   startEditComplaint,
 } from '../../actions/complaints';
 import database from '../../firebase/firebase';
+import moment from '../__mocks__/moment';
 
-const uid = 'thisismytestuid';
+const user = { uid: '837748374837', displayName: 'Raul', email: 'myemail@gmail.com' };
+
 const createMockStore = configureMockStore([thunk]);
-const defaultAuthState = { auth: { uid } };
+const defaultAuthState = { auth: { user } };
 
 const setFirebaseData = () => {
   const complaintsData = {};
@@ -52,14 +54,15 @@ describe('ADD ACTIONS', () => {
           complaint: {
             id: expect.any(String),
             ...complaintData,
-            uid,
+            uid: user.uid,
+            user,
           },
         });
 
         return database.ref(`complaints/${actions[0].complaint.id}`).once('value');
       })
       .then(snapshot => {
-        expect(snapshot.val()).toEqual({ uid, ...complaintData });
+        expect(snapshot.val()).toEqual({ uid: user.uid, user, ...complaintData });
         done();
       });
   });
@@ -69,8 +72,8 @@ describe('ADD ACTIONS', () => {
     const complaintDefaults = {
       title: '',
       content: '',
-      reportedAt: 0,
-      happenedAt: 0,
+      reportedAt: moment().valueOf(),
+      happenedAt: moment().valueOf(),
       reportTo: '',
       address: '',
     };
@@ -83,7 +86,8 @@ describe('ADD ACTIONS', () => {
           type: 'ADD_COMPLAINT',
           complaint: {
             id: expect.any(String),
-            uid,
+            uid: user.uid,
+            user,
             ...complaintDefaults,
           },
         });
@@ -91,7 +95,7 @@ describe('ADD ACTIONS', () => {
         return database.ref(`complaints/${actions[0].complaint.id}`).once('value');
       })
       .then(snapshot => {
-        expect(snapshot.val()).toEqual({ uid, ...complaintDefaults });
+        expect(snapshot.val()).toEqual({ uid: user.uid, user, ...complaintDefaults });
         done();
       });
   });

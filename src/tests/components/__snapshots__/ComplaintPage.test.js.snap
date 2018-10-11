@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render ComplaintPage 1`] = `
+<div>
+  <h1>
+    Me robaron mi celular
+  </h1>
+  <p>
+    Denuncia: 
+    <span>
+      Americatel SAC
+    </span>
+  </p>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "esta yo en la calle cuando de repente un maricon me robo el celular.",
+      }
+    }
+  />
+  <p>
+    <span>
+      Denunciado el 
+      1969-12-31T19:00:01-05:00
+    </span>
+  </p>
+</div>
+`;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { startLogout as startLogoutAction, startLogin as startLoginAction } from '../actions/auth';
+import { startLogout as startLogoutAction } from '../actions/auth';
 
-export const Header = ({ isAuthenticated, startLogout, startLogin }) => (
+export const Header = ({ isAuthenticated, startLogout }) => (
   <header className="header">
     <div className="content-container">
       <div className="header__content">
@@ -15,9 +15,9 @@ export const Header = ({ isAuthenticated, startLogout, startLogin }) => (
             Salir
           </button>
         ) : (
-          <button className="button button--link" onClick={startLogin}>
+          <Link className="button button--link" to="/login">
             Iniciar sesión
-          </button>
+          </Link>
         )}
       </div>
     </div>
@@ -25,12 +25,11 @@ export const Header = ({ isAuthenticated, startLogout, startLogin }) => (
 );
 
 const mapStateToProps = state => ({
-  isAuthenticated: !!state.auth.uid,
+  isAuthenticated: !!state.auth.user,
 });
 
 const mapDispatchToProps = dispatch => ({
   startLogout: () => dispatch(startLogoutAction()),
-  startLogin: () => dispatch(startLoginAction()),
 });
 
 export default connect(

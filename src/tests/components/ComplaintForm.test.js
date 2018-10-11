@@ -47,7 +47,6 @@ describe('EVENTS', () => {
   test('should set calendarFocused state when focusing on happenedAt input', () => {
     const focused = true;
     const wrapper = shallow(<ComplaintForm />);
-    console.log(wrapper.find('SingleDatePicker'));
     wrapper.find(SingleDatePicker).prop('onFocusChange')({ focused });
     expect(wrapper.state('calendarFocused')).toBe(focused);
   });

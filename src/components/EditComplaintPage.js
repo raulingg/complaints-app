@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { compose } from 'recompose';
 import ComplaintFormComponent from './ComplaintForm';
 import { startEditComplaint as startEditComplaintAction } from '../actions/complaints';
+import withAuthorization from './auth/withAuthorization';
 
 export class EditComplaintPage extends Component {
   onSubmit = updates => {
@@ -33,7 +36,11 @@ const mapDispatchToProps = dispatch => ({
   startEditComplaint: (id, complaint) => dispatch(startEditComplaintAction(id, complaint)),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default compose(
+  withRouter,
+  withAuthorization,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
 )(EditComplaintPage);

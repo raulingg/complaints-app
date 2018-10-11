@@ -1,3 +1,4 @@
+import moment from 'moment';
 import database from '../firebase/firebase';
 
 export const addComplaint = complaint => ({
@@ -7,17 +8,13 @@ export const addComplaint = complaint => ({
 
 export const startAddComplaint = (complaintData = {}) => (dispatch, getState) => {
   const {
-    auth: { uid },
+    auth: { user },
   } = getState();
-  const {
-    title = '',
-    content = '',
-    reportedAt = 0,
-    happenedAt = 0,
-    reportTo = '',
-    address = '',
-  } = complaintData;
-  const complaint = { title, content, reportedAt, happenedAt, reportTo, address, uid };
+  const { uid } = user;
+  const { title = '', content = '', reportTo = '', address = '' } = complaintData;
+  const reportedAt = complaintData.reportedAt || moment().valueOf();
+  const happenedAt = complaintData.happenedAt || moment().valueOf();
+  const complaint = { title, content, reportedAt, happenedAt, reportTo, address, uid, user };
 
   return database
     .ref('complaints')

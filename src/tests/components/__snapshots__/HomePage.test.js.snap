@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should correctly render ComplaintsList 1`] = `
+exports[`should correctly render ComplaintsList with complaints 1`] = `
 <div>
   <div>
     <div>
@@ -27,7 +27,7 @@ exports[`should correctly render ComplaintsList 1`] = `
       <p>
         <Link
           replace={false}
-          to="/edit/1"
+          to="show/1"
         >
           Me robaron mi celular
         </Link>
@@ -39,7 +39,7 @@ exports[`should correctly render ComplaintsList 1`] = `
       <p>
         <Link
           replace={false}
-          to="/edit/2"
+          to="show/2"
         >
           Me robaron mi celular
         </Link>
@@ -51,7 +51,7 @@ exports[`should correctly render ComplaintsList 1`] = `
       <p>
         <Link
           replace={false}
-          to="/edit/3"
+          to="show/3"
         >
           Me robaron mi celular
         </Link>
@@ -60,3 +60,35 @@ exports[`should correctly render ComplaintsList 1`] = `
   </div>
 </div>
 `;
+
+exports[`should correctly render ComplaintsList with no complaints 1`] = `
+<div>
+  <div>
+    <div>
+      Denuncia
+    </div>
+    <div>
+      Tipo
+    </div>
+    <div>
+      Fecha
+    </div>
+  </div>
+  <div>
+    <Link
+      className="button"
+      replace={false}
+      to="/add"
+    >
+      Denunciar
+    </Link>
+    <div>
+      <span>
+        No encontramos ninguna denuncia.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should correctly render LoadingPage when isLoading is true 1`] = `<LoadingPage />`;

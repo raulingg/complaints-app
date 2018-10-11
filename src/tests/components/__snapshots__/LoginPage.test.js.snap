@@ -17,6 +17,7 @@ exports[`should correctly render LoginPage 1`] = `
     </p>
     <button
       className="button"
+      onClick={[Function]}
     >
       Login with Google
     </button>

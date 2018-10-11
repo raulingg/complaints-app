@@ -7,9 +7,15 @@ test('should correctly render LoginPage', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should call startLogin on button click', () => {
-  const startLogin = jest.fn();
-  const wrapper = shallow(<LoginPage startLogin={startLogin} />);
+test('should call startLogin on button click', done => {
+  const historySpy = {
+    push: jest.fn(),
+  };
+  const startLoginSpy = jest.fn(() => Promise.resolve('done'));
+
+  const wrapper = shallow(<LoginPage startLogin={startLoginSpy} history={historySpy} />);
   wrapper.find('button').simulate('click');
-  expect(startLogin).toHaveBeenCalled();
+  expect(startLoginSpy).toHaveBeenCalledTimes(1);
+  // expect(historySpy.push).toHaveBeenCalledTimes(1);
+  done();
 });

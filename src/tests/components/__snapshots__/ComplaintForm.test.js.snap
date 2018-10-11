@@ -175,8 +175,8 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 "replaceData": [Function],
               },
               "blockMap": Immutable.OrderedMap {
-                "fegvl": Immutable.Record {
-                  "key": "fegvl",
+                "r8vq": Immutable.Record {
+                  "key": "r8vq",
                   "type": "unstyled",
                   "text": "esta yo en la calle cuando de repente un maricon me robo el celular.",
                   "characterList": Immutable.List [
@@ -458,17 +458,17 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 },
               },
               "selectionBefore": Immutable.Record {
-                "anchorKey": "fegvl",
+                "anchorKey": "r8vq",
                 "anchorOffset": 0,
-                "focusKey": "fegvl",
+                "focusKey": "r8vq",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
               },
               "selectionAfter": Immutable.Record {
-                "anchorKey": "fegvl",
+                "anchorKey": "r8vq",
                 "anchorOffset": 0,
-                "focusKey": "fegvl",
+                "focusKey": "r8vq",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
@@ -476,7 +476,7 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             },
             "decorator": null,
             "directionMap": Immutable.OrderedMap {
-              "fegvl": "LTR",
+              "r8vq": "LTR",
             },
             "forceSelection": false,
             "inCompositionMode": false,
@@ -485,15 +485,15 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             "nativelyRenderedContent": null,
             "redoStack": Immutable.Stack [],
             "selection": Immutable.Record {
-              "anchorKey": "fegvl",
+              "anchorKey": "r8vq",
               "anchorOffset": 0,
-              "focusKey": "fegvl",
+              "focusKey": "r8vq",
               "focusOffset": 0,
               "isBackward": false,
               "hasFocus": false,
             },
             "treeMap": Immutable.OrderedMap {
-              "fegvl": Immutable.List [
+              "r8vq": Immutable.List [
                 Immutable.Record {
                   "start": 0,
                   "end": 68,

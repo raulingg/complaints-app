@@ -1,27 +1,28 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
 import LoginPageComponent from '../components/LoginPage';
-import ComplaintsListComponent from '../components/List/ComplaintsList';
-import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
+import HomePageComponent from '../components/HomePage';
+import ComplaintPageComponent from '../components/ComplaintPage';
 import AddComplaintPageComponent from '../components/AddComplaintPage';
 import EditComplaintPageComponent from '../components/EditComplaintPage';
+import withAuthentication from '../components/auth/withAuthentication';
+import HeaderComponent from '../components/Header';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
+      <HeaderComponent />
       <Switch>
-        <PublicRoute path="/" component={ComplaintsListComponent} exact />
-        <PublicRoute path="/login" component={LoginPageComponent} />
-        <PrivateRoute path="/add" component={AddComplaintPageComponent} />
-        <PrivateRoute path="/edit/:id" component={EditComplaintPageComponent} />
-        <PrivateRoute path="/dashboard" component={DashboardPage} />
+        <Route path="/" component={HomePageComponent} exact />
+        <Route path="/show/:id" component={ComplaintPageComponent} exact />
+        <Route path="/login" component={LoginPageComponent} exact />
+        <Route path="/add" component={AddComplaintPageComponent} exact />
+        <Route path="/edit/:id" component={EditComplaintPageComponent} exact />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
   </BrowserRouter>
 );
 
-export default AppRouter;
+export default withAuthentication(AppRouter);
