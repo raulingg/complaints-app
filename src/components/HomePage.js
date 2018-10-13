@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Button from '../styles/components/Buttons';
 import { startSetComplaints as startSetComplaintsAction } from '../actions/complaints';
 import LoadingPage from './LoadingPage';
 
@@ -29,9 +30,9 @@ export class HomePage extends Component {
           <div>Fecha</div>
         </div>
         <div>
-          <Link to="/add" className="button">
+          <Button as={Link} to="/add">
             Denunciar
-          </Link>
+          </Button>
           {complaints.length === 0 ? (
             <div>
               <span>No encontramos ninguna denuncia.</span>

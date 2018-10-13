@@ -1,26 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly render LoginPage 1`] = `
-<div
-  className="box-layout"
->
-  <div
-    className="box-layout__box"
-  >
-    <h1
-      className="box-layout__title"
-    >
-      Boilerplate
-    </h1>
-    <p>
-      Tag line for app.
-    </p>
-    <button
-      className="button"
+<ForwardRef>
+  <ForwardRef>
+    <ForwardRef>
+      Denuncia Perú App
+    </ForwardRef>
+    <ForwardRef
       onClick={[Function]}
     >
-      Login with Google
-    </button>
-  </div>
-</div>
+      Login con Google
+    </ForwardRef>
+    <p>
+      Haz tu denuncia, no calles!.
+    </p>
+  </ForwardRef>
+</ForwardRef>
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Header } from '../../components/Header';
+import { ButtonLink } from '../../styles/components/Buttons';
 
 test('should render Header correctly', () => {
   const wrapper = shallow(<Header startLogout={() => {}} isAuthenticated />);
@@ -12,6 +13,6 @@ test('should call startLogout on button click when user is authenticated', () =>
   const isAuthenticated = true;
 
   const wrapper = shallow(<Header startLogout={startLogout} isAuthenticated={isAuthenticated} />);
-  wrapper.find('button').simulate('click');
+  wrapper.find(ButtonLink).simulate('click');
   expect(startLogout).toHaveBeenCalled();
 });

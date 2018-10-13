@@ -14,13 +14,12 @@ exports[`should correctly render ComplaintsList with complaints 1`] = `
     </div>
   </div>
   <div>
-    <Link
-      className="button"
-      replace={false}
+    <ForwardRef
+      as={[Function]}
       to="/add"
     >
       Denunciar
-    </Link>
+    </ForwardRef>
     <div
       key="1"
     >
@@ -75,13 +74,12 @@ exports[`should correctly render ComplaintsList with no complaints 1`] = `
     </div>
   </div>
   <div>
-    <Link
-      className="button"
-      replace={false}
+    <ForwardRef
+      as={[Function]}
       to="/add"
     >
       Denunciar
-    </Link>
+    </ForwardRef>
     <div>
       <span>
         No encontramos ninguna denuncia.

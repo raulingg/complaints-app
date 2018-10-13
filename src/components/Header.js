@@ -1,27 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { startLogout as startLogoutAction } from '../actions/auth';
+import * as HeaderStyles from '../styles/components/Header';
+import ContentContainer from '../styles/components/ContentContainer';
+import { ButtonLink } from '../styles/components/Buttons';
 
 export const Header = ({ isAuthenticated, startLogout }) => (
-  <header className="header">
-    <div className="content-container">
-      <div className="header__content">
-        <Link className="header__title" to="/">
+  <HeaderStyles.Header>
+    <ContentContainer>
+      <HeaderStyles.Content>
+        <HeaderStyles.Title to="/">
           <h1>Denuncias</h1>
-        </Link>
+        </HeaderStyles.Title>
         {isAuthenticated ? (
-          <button className="button button--link" onClick={startLogout}>
-            Salir
-          </button>
+          <ButtonLink onClick={startLogout}>Salir</ButtonLink>
         ) : (
-          <Link className="button button--link" to="/login">
+          <ButtonLink as={Link} to="/login">
             Iniciar sesión
-          </Link>
+          </ButtonLink>
         )}
-      </div>
-    </div>
-  </header>
+      </HeaderStyles.Content>
+    </ContentContainer>
+  </HeaderStyles.Header>
 );
 
 const mapStateToProps = state => ({

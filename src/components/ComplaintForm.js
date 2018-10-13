@@ -6,6 +6,7 @@ import { Editor } from 'react-draft-wysiwyg';
 import htmlToDraft from 'html-to-draftjs';
 import draftToHtml from 'draftjs-to-html';
 import 'react-dates/initialize';
+import Button from '../styles/components/Buttons';
 
 export default class ComplaintForm extends Component {
   constructor(props) {
@@ -83,7 +84,7 @@ export default class ComplaintForm extends Component {
           <input type="text" name="reportTo" value={reportTo} onChange={this.onReportToChange} />
         </div>
         <div>
-          <button className="button">Guardar cambios</button>
+          <Button>Guardar cambios</Button>
         </div>
       </form>
     );

@@ -1,6 +1,7 @@
 # Boilerplate React + Redux + Firebase
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 This boilerplate aim to init any project employing React, Redux and Firebase.
 In addition it adds some helpful tools in order to improve your code and make easy and fun your development workflow.

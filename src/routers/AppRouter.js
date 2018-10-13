@@ -8,10 +8,12 @@ import AddComplaintPageComponent from '../components/AddComplaintPage';
 import EditComplaintPageComponent from '../components/EditComplaintPage';
 import withAuthentication from '../components/auth/withAuthentication';
 import HeaderComponent from '../components/Header';
+import GlobalStyle from '../styles/base/globalStyles';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
+      <GlobalStyle />
       <HeaderComponent />
       <Switch>
         <Route path="/" component={HomePageComponent} exact />

@@ -7,6 +7,7 @@ import 'normalize.css/normalize.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
+import './styles/base/globalStyles';
 
 const store = configureStore();
 

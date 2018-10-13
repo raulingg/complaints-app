@@ -1,31 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header
-  className="header"
->
-  <div
-    className="content-container"
-  >
-    <div
-      className="header__content"
-    >
-      <Link
-        className="header__title"
-        replace={false}
+<ForwardRef>
+  <ForwardRef>
+    <ForwardRef>
+      <ForwardRef
         to="/"
       >
         <h1>
           Denuncias
         </h1>
-      </Link>
-      <button
-        className="button button--link"
+      </ForwardRef>
+      <ForwardRef
         onClick={[Function]}
       >
         Salir
-      </button>
-    </div>
-  </div>
-</header>
+      </ForwardRef>
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
 `;

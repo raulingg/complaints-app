@@ -2,6 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogin as startLoginAction } from '../actions/auth';
+import * as LoginPageStyles from '../styles/components/LoginPage';
+import Button from '../styles/components/Buttons';
 
 export const LoginPage = ({ history, startLogin }) => {
   const onClick = async () => {
@@ -10,15 +12,13 @@ export const LoginPage = ({ history, startLogin }) => {
   };
 
   return (
-    <div className="box-layout">
-      <div className="box-layout__box">
-        <h1 className="box-layout__title">Boilerplate</h1>
-        <p>Tag line for app.</p>
-        <button className="button" onClick={onClick}>
-          Login with Google
-        </button>
-      </div>
-    </div>
+    <LoginPageStyles.Container>
+      <LoginPageStyles.Box>
+        <LoginPageStyles.Title>Denuncia Perú App</LoginPageStyles.Title>
+        <Button onClick={onClick}>Login con Google</Button>
+        <p>Haz tu denuncia, no calles!.</p>
+      </LoginPageStyles.Box>
+    </LoginPageStyles.Container>
   );
 };
 
