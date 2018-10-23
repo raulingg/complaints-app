@@ -1,19 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly render LoginPage 1`] = `
-<ForwardRef>
-  <ForwardRef>
-    <ForwardRef>
-      Denuncia Perú App
-    </ForwardRef>
-    <ForwardRef
-      onClick={[Function]}
+<div
+  class="LoginPage__Container-sc-1fkyz9g-0 ivayDi"
+>
+  <div
+    class="LoginPage__Box-sc-1fkyz9g-1 iuKwAc"
+  >
+    <h1
+      class="LoginPage__Title-sc-1fkyz9g-2 edsAsb"
     >
-      Login con Google
-    </ForwardRef>
+      Denuncia Perú App
+    </h1>
     <p>
       Haz tu denuncia, no calles!.
     </p>
-  </ForwardRef>
-</ForwardRef>
+    <button
+      class="LoginPage__ButtonGoogle-sc-1fkyz9g-4 kEaVls"
+      data-provider="google"
+    >
+      Login con Google
+    </button>
+    <button
+      class="LoginPage__ButtonFacebook-sc-1fkyz9g-3 hsGKuA"
+      data-provider="facebook"
+    >
+      Login con Facebook
+    </button>
+  </div>
+</div>
 `;

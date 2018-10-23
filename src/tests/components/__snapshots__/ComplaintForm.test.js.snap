@@ -173,8 +173,8 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 "replaceData": [Function],
               },
               "blockMap": Immutable.OrderedMap {
-                "2efg8": Immutable.Record {
-                  "key": "2efg8",
+                "6okic": Immutable.Record {
+                  "key": "6okic",
                   "type": "unstyled",
                   "text": "esta yo en la calle cuando de repente un maricon me robo el celular.",
                   "characterList": Immutable.List [
@@ -456,17 +456,17 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 },
               },
               "selectionBefore": Immutable.Record {
-                "anchorKey": "2efg8",
+                "anchorKey": "6okic",
                 "anchorOffset": 0,
-                "focusKey": "2efg8",
+                "focusKey": "6okic",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
               },
               "selectionAfter": Immutable.Record {
-                "anchorKey": "2efg8",
+                "anchorKey": "6okic",
                 "anchorOffset": 0,
-                "focusKey": "2efg8",
+                "focusKey": "6okic",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
@@ -474,7 +474,7 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             },
             "decorator": null,
             "directionMap": Immutable.OrderedMap {
-              "2efg8": "LTR",
+              "6okic": "LTR",
             },
             "forceSelection": false,
             "inCompositionMode": false,
@@ -483,15 +483,15 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             "nativelyRenderedContent": null,
             "redoStack": Immutable.Stack [],
             "selection": Immutable.Record {
-              "anchorKey": "2efg8",
+              "anchorKey": "6okic",
               "anchorOffset": 0,
-              "focusKey": "2efg8",
+              "focusKey": "6okic",
               "focusOffset": 0,
               "isBackward": false,
               "hasFocus": false,
             },
             "treeMap": Immutable.OrderedMap {
-              "2efg8": Immutable.List [
+              "6okic": Immutable.List [
                 Immutable.Record {
                   "start": 0,
                   "end": 68,

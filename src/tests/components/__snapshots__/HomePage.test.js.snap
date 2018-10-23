@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should correctly render ComplaintsList with complaints 1`] = `
+exports[`HomePage tests should correctly render ComplaintsList with complaints 1`] = `
 <div>
   <div>
     <div>
@@ -60,7 +60,7 @@ exports[`should correctly render ComplaintsList with complaints 1`] = `
 </div>
 `;
 
-exports[`should correctly render ComplaintsList with no complaints 1`] = `
+exports[`HomePage tests should correctly render ComplaintsList with no complaints 1`] = `
 <div>
   <div>
     <div>
@@ -89,4 +89,4 @@ exports[`should correctly render ComplaintsList with no complaints 1`] = `
 </div>
 `;
 
-exports[`should correctly render LoadingPage when isLoading is true 1`] = `<LoadingPage />`;
+exports[`HomePage tests should correctly render LoadingPage when isLoading is true 1`] = `<LoadingPage />`;

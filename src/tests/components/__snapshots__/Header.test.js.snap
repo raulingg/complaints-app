@@ -1,22 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Header correctly 1`] = `
-<ForwardRef>
-  <ForwardRef>
-    <ForwardRef>
-      <ForwardRef
-        to="/"
+exports[`should render Header correctly with user authenticated 1`] = `
+<header
+  className="Header-e03989-0 gKTQuZ"
+>
+  <div
+    className="ContentContainer-l6l9pf-0 jTcgyn"
+  >
+    <div
+      className="Header__Content-e03989-1 hxKFme"
+    >
+      <a
+        className="Header__Title-e03989-2 gZlVzz"
+        href="/"
+        onClick={[Function]}
       >
         <h1>
           Denuncias
         </h1>
-      </ForwardRef>
-      <ForwardRef
-        onClick={[Function]}
+      </a>
+      <button
+        className="Buttons__ButtonLink-sc-1litudf-1 bEkatX"
       >
         Salir
-      </ForwardRef>
-    </ForwardRef>
-  </ForwardRef>
-</ForwardRef>
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`should render Header correctly with user unauthenticated 1`] = `
+<header
+  className="Header-e03989-0 gKTQuZ"
+>
+  <div
+    className="ContentContainer-l6l9pf-0 jTcgyn"
+  >
+    <div
+      className="Header__Content-e03989-1 hxKFme"
+    >
+      <a
+        className="Header__Title-e03989-2 gZlVzz"
+        href="/"
+        onClick={[Function]}
+      >
+        <h1>
+          Denuncias
+        </h1>
+      </a>
+      <a
+        className="Buttons__ButtonLink-sc-1litudf-1 bEkatX"
+        href="/login"
+        onClick={[Function]}
+      >
+        Iniciar sesión
+      </a>
+    </div>
+  </div>
+</header>
 `;

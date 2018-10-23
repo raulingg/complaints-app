@@ -4,6 +4,7 @@ import { colors, sizes } from '../settings';
 
 const Header = styled.header`
   background: ${colors.darkBlue};
+  width: 100vw;
 `;
 
 const Content = styled.div`

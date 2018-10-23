@@ -7,14 +7,16 @@ const Button = styled.button`
   color: white;
   display: inline-block;
   font-size: ${fontSizes.large};
-  font-weight: 300;
-  line-height: 1;
+  font-weight: 500;
+  line-height: 1.5;
   padding: ${sizes.s};
   text-decoration: none;
+  margin: 1rem;
 `;
 
 const ButtonLink = styled(Button)`
   background: none;
+  margin: 0;
 `;
 
 export { Button as default, ButtonLink };

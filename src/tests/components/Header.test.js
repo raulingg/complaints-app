@@ -1,10 +1,27 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { Router } from 'react-router';
+import { createMemoryHistory } from 'history';
+
+import renderer from 'react-test-renderer';
 import { Header } from '../../components/Header';
 import { ButtonLink } from '../../styles/components/Buttons';
 
-test('should render Header correctly', () => {
-  const wrapper = shallow(<Header startLogout={() => {}} isAuthenticated />);
+test('should render Header correctly with user authenticated', () => {
+  const wrapper = renderer.create(
+    <Router history={createMemoryHistory()}>
+      <Header isAuthenticated />
+    </Router>
+  );
+  expect(wrapper).toMatchSnapshot();
+});
+
+test('should render Header correctly with user unauthenticated', () => {
+  const wrapper = renderer.create(
+    <Router history={createMemoryHistory()}>
+      <Header isAuthenticated={false} />
+    </Router>
+  );
   expect(wrapper).toMatchSnapshot();
 });
 

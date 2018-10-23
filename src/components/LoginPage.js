@@ -3,11 +3,10 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogin as startLoginAction } from '../actions/auth';
 import * as LoginPageStyles from '../styles/components/LoginPage';
-import Button from '../styles/components/Buttons';
 
 export const LoginPage = ({ history, startLogin }) => {
-  const onClick = async () => {
-    await startLogin();
+  const onClick = async e => {
+    await startLogin(e.target.dataset.provider);
     history.push('/');
   };
 
@@ -15,15 +14,20 @@ export const LoginPage = ({ history, startLogin }) => {
     <LoginPageStyles.Container>
       <LoginPageStyles.Box>
         <LoginPageStyles.Title>Denuncia Perú App</LoginPageStyles.Title>
-        <Button onClick={onClick}>Login con Google</Button>
         <p>Haz tu denuncia, no calles!.</p>
+        <LoginPageStyles.ButtonGoogle onClick={onClick} data-provider="google">
+          Login con Google
+        </LoginPageStyles.ButtonGoogle>
+        <LoginPageStyles.ButtonFacebook onClick={onClick} data-provider="facebook">
+          Login con Facebook
+        </LoginPageStyles.ButtonFacebook>
       </LoginPageStyles.Box>
     </LoginPageStyles.Container>
   );
 };
 
 const mapDispatchToProps = dispatch => ({
-  startLogin: () => dispatch(startLoginAction()),
+  startLogin: provider => dispatch(startLoginAction(provider)),
 });
 
 export default withRouter(
