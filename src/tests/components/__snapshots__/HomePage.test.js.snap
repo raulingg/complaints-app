@@ -14,12 +14,12 @@ exports[`HomePage tests should correctly render ComplaintsList with complaints 1
     </div>
   </div>
   <div>
-    <ForwardRef
+    <Buttons__Button
       as={[Function]}
       to="/add"
     >
       Denunciar
-    </ForwardRef>
+    </Buttons__Button>
     <div
       key="1"
     >
@@ -74,12 +74,12 @@ exports[`HomePage tests should correctly render ComplaintsList with no complaint
     </div>
   </div>
   <div>
-    <ForwardRef
+    <Buttons__Button
       as={[Function]}
       to="/add"
     >
       Denunciar
-    </ForwardRef>
+    </Buttons__Button>
     <div>
       <span>
         No encontramos ninguna denuncia.

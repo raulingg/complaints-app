@@ -130,9 +130,9 @@ exports[`RENDER should render ComplaintForm correctly 1`] = `
     />
   </div>
   <div>
-    <ForwardRef>
+    <Buttons__Button>
       Guardar cambios
-    </ForwardRef>
+    </Buttons__Button>
   </div>
 </form>
 `;
@@ -173,8 +173,8 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 "replaceData": [Function],
               },
               "blockMap": Immutable.OrderedMap {
-                "6okic": Immutable.Record {
-                  "key": "6okic",
+                "cikq3": Immutable.Record {
+                  "key": "cikq3",
                   "type": "unstyled",
                   "text": "esta yo en la calle cuando de repente un maricon me robo el celular.",
                   "characterList": Immutable.List [
@@ -456,17 +456,17 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
                 },
               },
               "selectionBefore": Immutable.Record {
-                "anchorKey": "6okic",
+                "anchorKey": "cikq3",
                 "anchorOffset": 0,
-                "focusKey": "6okic",
+                "focusKey": "cikq3",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
               },
               "selectionAfter": Immutable.Record {
-                "anchorKey": "6okic",
+                "anchorKey": "cikq3",
                 "anchorOffset": 0,
-                "focusKey": "6okic",
+                "focusKey": "cikq3",
                 "focusOffset": 0,
                 "isBackward": false,
                 "hasFocus": false,
@@ -474,7 +474,7 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             },
             "decorator": null,
             "directionMap": Immutable.OrderedMap {
-              "6okic": "LTR",
+              "cikq3": "LTR",
             },
             "forceSelection": false,
             "inCompositionMode": false,
@@ -483,15 +483,15 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
             "nativelyRenderedContent": null,
             "redoStack": Immutable.Stack [],
             "selection": Immutable.Record {
-              "anchorKey": "6okic",
+              "anchorKey": "cikq3",
               "anchorOffset": 0,
-              "focusKey": "6okic",
+              "focusKey": "cikq3",
               "focusOffset": 0,
               "isBackward": false,
               "hasFocus": false,
             },
             "treeMap": Immutable.OrderedMap {
-              "6okic": Immutable.List [
+              "cikq3": Immutable.List [
                 Immutable.Record {
                   "start": 0,
                   "end": 68,
@@ -623,9 +623,9 @@ exports[`RENDER should render ComplaintForm with complaint data 1`] = `
     />
   </div>
   <div>
-    <ForwardRef>
+    <Buttons__Button>
       Guardar cambios
-    </ForwardRef>
+    </Buttons__Button>
   </div>
 </form>
 `;

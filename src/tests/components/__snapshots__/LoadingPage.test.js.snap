@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly render LoadingPage 1`] = `
-<ForwardRef>
-  <ForwardRef
+<Loader>
+  <Loader__Image
     alt="load spinner"
     src="images/loader.gif"
   />
-</ForwardRef>
+</Loader>
 `;
